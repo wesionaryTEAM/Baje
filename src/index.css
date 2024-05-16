@@ -1,0 +1,9 @@
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  
+  body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    overflow: hidden;
+  }
