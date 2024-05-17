@@ -2,6 +2,11 @@
 
 Baje is an AI-powered assistant designed to help with project management and software development tasks.
 
+![baje-intro](https://github.com/wesionaryTEAM/Baje/assets/79510196/f206b5dd-3e0a-47e8-8e65-88355daa442b)
+![baje-specs](https://github.com/wesionaryTEAM/Baje/assets/79510196/7e91a943-4898-4157-b843-50edc7ff9178)
+
+
+
 ## Features
 
 ### Project Specification and Onboarding
@@ -25,3 +30,4 @@ Baje is an AI-powered assistant designed to help with project management and sof
 ```zsh
 yarn install
 yarn dev
+
