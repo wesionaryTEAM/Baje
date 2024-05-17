@@ -90,11 +90,11 @@ function Chat() {
       <div className="flex flex-1 flex-col space-y-10 mb-10 ">
         <div className="max-w-4xl  mx-40 text-center mt-8">
           <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl ">
-            Welcome to बाजे
+            बाजेको चौतारी
           </h1>
           <p className="mt-3 text-gray-600 ">
-            Your AI-powered copilot for the document information and development
-            assistance.
+            Bajey is always ready for wise and visionary advice. Feel free to
+            ask for assistance
           </p>
         </div>
         <div className="h-full overflow-auto">
