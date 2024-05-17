@@ -14,7 +14,8 @@ function HTMLContentRender({
   return (
     <section
       className={twMerge(
-        "editor-content break-all",
+        "editor-content whitespace-pre-wrap break-words",
+
         // notoSansJP.className,
         className
       )}
