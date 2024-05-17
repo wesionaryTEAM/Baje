@@ -35,7 +35,7 @@ function HTMLContentRender({
             "id",
           ],
           ADD_ATTR: ["allowfullscreen", "href"],
-          ADD_TAGS: ["iframe", "a"],
+          ADD_TAGS: ["iframe", "a", "code"],
         }),
       }}
     />

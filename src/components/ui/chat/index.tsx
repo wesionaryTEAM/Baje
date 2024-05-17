@@ -25,16 +25,17 @@ function Chat() {
   const [inputMessage, setInputMessage] = useState("");
   const [messages, setMessages] = useState<MessageType[]>([]);
 
-  useEffect(() => {
-    const chatByRole = getChatByRole(Number(getSelectedRole()));
-    chatByRole && setMessages(chatByRole.messages);
-  }, []);
-
   const handleIntoView = () => {
     const documentId = document.getElementById("chat-bottom");
     if (documentId)
       setTimeout(() => documentId?.scrollIntoView({ behavior: "smooth" }), 300);
   };
+
+  useEffect(() => {
+    const chatByRole = getChatByRole(Number(getSelectedRole()));
+    chatByRole && setMessages(chatByRole.messages);
+    handleIntoView();
+  }, []);
 
   const { mutate: getreplyForPropmt, isPending } = useMutation({
     mutationFn: getReplies,
@@ -45,7 +46,7 @@ function Chat() {
         id: replyMessageId,
         message: replydata,
         date: new Date().toLocaleTimeString("en-NP"),
-        sender: "bot",
+        sender: "बाजे भन्नुहुन्छ",
         roleId: Number(getSelectedRole()),
       };
       setMessages([...messages, newReply]);
@@ -87,22 +88,23 @@ function Chat() {
     <div className="flex flex-row h-screen">
       <NewSidebar handleChange={handleUserChange} />
       <div className="flex flex-1 flex-col space-y-10 mb-10 ">
-        <div className="max-w-4xl px-4 sm:px-6 lg:px-8 mx-auto text-center mt-8">
-          <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white">
-            Welcome to Wesionary Specification Bot
+        <div className="max-w-4xl  mx-40 text-center mt-8">
+          <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl ">
+            Welcome to बाजे
           </h1>
-          <p className="mt-3 text-gray-600 dark:text-neutral-400">
-            Your AI-powered copilot for the document information.
+          <p className="mt-3 text-gray-600 ">
+            Your AI-powered copilot for the document information and development
+            assistance.
           </p>
         </div>
         <div className="h-full overflow-auto">
-          <div className=" mx-40">
+          <div className=" mx-40 ">
             <ChatBubble messages={messages} loading={isPending} />
           </div>
           <div id="chat-bottom"></div>
         </div>
 
-        <div className="mx-40 flex items-end space-x-6">
+        <div className="mx-40  flex items-end space-x-6">
           <Textarea
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
@@ -113,7 +115,7 @@ function Chat() {
             onClick={handleSend}
             type="submit"
           >
-            <Send className="h-4 w-4" />
+            <Send className="h-5 w-5" />
           </Button>
         </div>
       </div>

@@ -7,3 +7,106 @@
     margin: 0;
     overflow: hidden;
   }
+
+  @layer base {
+    .editor-content {
+      blockquote,
+      dl,
+      dd,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      hr,
+      figure,
+      p,
+      pre {
+        margin: 1rem 0;
+      }
+      h1 {
+        @apply text-2xl font-bold leading-[32px] sm:text-[40px] sm:leading-[48px];
+      }
+      h2 {
+        @apply text-lg font-bold leading-[32px] sm:text-[31px] sm:leading-[32px];
+      }
+      h3 {
+        @apply text-sm font-bold leading-[24px] sm:text-[24px] sm:leading-[32px];
+      }
+      h4 {
+        @apply text-sm font-bold leading-[24px] sm:text-[18px] sm:leading-[24px];
+      }
+      h5 {
+        @apply text-sm font-bold leading-[24px] sm:text-[16px] sm:leading-[24px];
+      }
+      h6 {
+        @apply text-xs font-bold leading-[16px];
+      }
+  
+      .caption {
+        @apply text-[10px] font-normal leading-[16px] sm:text-xs sm:leading-[16px];
+      }
+  
+      /* list */
+      ul {
+        list-style: disc !important;
+        margin-left: 10px;
+      }
+  
+      ol {
+        list-style: decimal !important;
+        margin-left: 10px;
+      }
+  
+      a {
+        color: #1a8ce4;
+        text-decoration: underline;
+      }
+  
+      /* table */
+      table {
+        display: table;
+        border-spacing: 2px;
+        border-color: gray;
+        border-width: 1px;
+        padding: 8px;
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        max-width: 100%;
+      }
+      tbody {
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit;
+      }
+      td {
+        border: 1px solid #dddddd;
+        padding: 8px;
+      }
+      tfoot {
+        display: table-footer-group;
+        vertical-align: middle;
+        border-color: inherit;
+      }
+      th {
+        display: table-cell;
+        vertical-align: inherit;
+        font-weight: bold;
+        text-align: center;
+        background: #d4d4d4;
+      }
+      thead {
+        display: table-header-group;
+        vertical-align: middle;
+        border-color: inherit;
+      }
+      tr {
+        display: table-row;
+        vertical-align: inherit;
+      }
+      .se-image-container {
+        outline: none !important;
+      }
+    }
+  }
