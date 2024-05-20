@@ -30,4 +30,7 @@ Baje is an AI-powered assistant designed to help with project management and sof
 ```zsh
 yarn install
 yarn dev
+```
 
+# Backend
+https://github.com/wesionaryTEAM/baje-ko-dimag
